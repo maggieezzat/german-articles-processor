@@ -1,3 +1,4 @@
 test.tsv
 train.tsv
 articles.tsv
+corpus.sqlite3
