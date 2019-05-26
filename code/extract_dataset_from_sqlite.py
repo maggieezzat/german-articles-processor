@@ -32,7 +32,7 @@ if __name__ == '__main__':
     cursor = conn.cursor()
 
     with open(args.csv_file, "w") as csvfile:
-        writer = csv.writer(csvfile, delimiter=';',quotechar='\'', quoting=csv.QUOTE_MINIMAL)
+        writer = csv.writer(csvfile, delimiter='\t',quotechar='\'', quoting=csv.QUOTE_MINIMAL)
 
         for row in tqdm(cursor.execute(ARTICLE_QUERY).fetchall(), unit_scale=True):
             path = row[0]
